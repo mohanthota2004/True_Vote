@@ -1,0 +1,109 @@
+
+
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Login Page
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css')
+  link(rel='stylesheet' href='./assests/css/login.css')
+header
+  img#lo(src='./assests/img/log.png' alt='logo')
+  nav#nav-bar
+    ul
+      li
+        a(href='/main') Home
+      li
+        a(href='/main#interface-container') Features
+      li
+        a(href='/main#account-steps') Help
+  p Caste your vote
+
+#container.container
+  // Login Form
+  .form-container.sign-in-container
+
+    form#loginForm(onsubmit='return handleLogin()' action='/login/authenticate' method='POST' )
+      h1 Login
+      .usertype
+        label(for='userType') Select User
+        select#userType(name='userType' required='')
+          option(value='') Select User!
+          option(value='Voter') Voter
+          option(value='Candidate') Candidate
+          option(value='Admin') Admin
+      label(for='email') Email
+      input#username(type='email' placeholder='Enter email' name="email" pattern='.+\.com$' required)
+      label(for='password') Password
+      input#password(type='password' placeholder='Enter Password' name="password")
+      button#b(type='submit') Login
+      p#loginError.error-message
+      p#text
+        | Don&apos;t have an account?
+        a#i Click on Register =&gt;
+  // Register Form
+  .form-container.sign-up-container
+    form#registerForm(onsubmit='return validateRegister()' action="/login/post" method="POST")
+      h2 Register
+      label(for='name') Name
+      input#name(type='text' placeholder='Enter your name' name="Name")
+      label(for='email') Email
+      input#email(type='email' placeholder='Enter your email' name="email"  pattern='.+\.com$' required)
+      label(for='registerPassword') Create Password
+      input#registerPassword(type='password' placeholder='Create a password' name="password")
+      label(for='phone') Phone Number:
+      input#phone(type='tel' name='phone' placeholder='123-456-7890'  pattern='[0-9]{10}' required='')
+      // Optional pattern for validation
+      small Format: 123-456-7890
+      label(for='dob') Date of Birth
+      input#dob(type='date' name="dob")
+      .usertype
+        label(for='userType') Select User
+        select#userType(name='userType' required='')
+          option(value='') Select User!
+          option(value='Voter') Voter
+          option(value='Candidate') Candidate
+          option(value='Admin') Admin
+      button#b(type='submit') Register
+      p#registerError.error-message
+      p#text
+        | Already have an account?
+        a#i Click on Login =&gt;
+  // Overlay Container
+  .overlay-container
+    img(src='./assests/img/sh.jpeg' alt='n')
+    .overlay
+      .overlay-panel.overlay-left
+        h1#s Welcome Back!
+        p#sa To keep connected with us, please login with your personal info
+        button#signIn.ghost LogIn
+      .overlay-panel.overlay-right
+        h1#s Hello, Friend!
+        p#sa Enter your personal details and start your journey with us
+        button#signUp.ghost Register
+footer
+  .footer-container
+    .footer-column
+      h2 About True Vote
+      p
+        | True Vote is an online voting platform designed to ensure secure and transparent elections. Our system is trusted by millions of users for its efficiency and reliability.
+    .footer-column
+      h2 Key Features
+      ul
+        li Secure voting process
+        li Real-time results
+        li User-friendly interface
+        li Available 24/7
+        li Trusted by organizations worldwide
+    .footer-column
+      h2 Follow Us On
+      i.fab.fa-instagram
+      i.fab.fa-x
+      i.fab.fa-facebook
+    .footer-column
+      a(href='/contact')
+        button.contac-butto Contact Us
+      a(href='#') Help?
+  p.footer-rights  copy &amp;: All rights reserved to @True Vote
+// JavaScript
+script(src='./assests/js/script.js')

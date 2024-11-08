@@ -1,0 +1,242 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #eada9c; 
+    width:auto;
+}
+/* html {
+    scroll-behavior: smooth;
+} */
+/* Header styling */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: #7b5029; /* Change header color to navy blue */
+    box-shadow: 0 0 10px #000;
+    z-index: 10;
+}
+
+#lo {
+    height: 50px;
+}
+
+header h1, header p {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+header p {
+    margin-right: 20px;
+    font-style: italic;
+    font-stretch: expanded;
+    font-size: x-large;
+}
+
+#nav-bar li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+#nav-bar ul {
+    margin-left: auto;
+}
+
+#nav-bar a {
+    text-decoration: none;
+    color: white; /* Change navigation color to white */
+    font-size: larger;
+    margin-right: 20px;
+    text-transform: uppercase;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#nav-bar a::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s transform ease;
+    transform: scale3d(0, 1, 1);
+    transform-origin: 0 50%;
+}
+
+#nav-bar a:hover::before {
+    transform: scale3d(1, 1, 1);
+}
+
+#nav-bar a::before {
+    background: white;
+    transform-origin: 100% 50%;
+}
+
+#nav-bar a:hover::before {
+    transform-origin: 0 50%;
+}
+#main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 120px; /* Adjust for header height */
+    margin-bottom: 80px; /* Adjust for footer height */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#main-content button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #04AA6D;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#main-content button:hover {
+    background-color: #039e6d;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+#ft{
+    color: white;
+    text-align: left;
+}
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    /* display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 40px;
+    max-width: 1200px;
+    margin-right: 0 auto;
+    padding: 20px; */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto; /* This centers the container horizontally */
+    padding: 20px;
+
+}
+
+.footer-column {
+    text-align: left;
+}
+.footer-column i{
+    text-align: left;
+    color: white;
+    /* margin-right:8px; */
+    font-size: x-large;
+    /* margin-left:10px; */
+    margin:8px 8px 0 10px;
+  
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+p, li, a {
+    font-size: 16px;
+    /* margin-bottom:2px; */
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.contact-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.contact-button:hover {
+    background-color: darkred;
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.footer-rights {
+    margin-top: 20px;
+    font-size: 12px;
+}
+@media (max-width: 768px) {
+    .footer-column{
+        flex-basis: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-column{
+        flex-basis: 100%;
+    }
+}

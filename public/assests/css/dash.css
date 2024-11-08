@@ -1,0 +1,134 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+#lo{
+    height: 50px;
+}
+.header {
+    display: flex;
+    text-align: center;
+    padding: 10px;
+    background-color:rgba(33, 78, 126, 1);
+    color: white;
+    margin-bottom: 30px;
+    width:100%;
+    box-shadow:0 0 10px #000;;
+}
+.header h1, .header p {
+    font-family: 'Cormorant Garamond', serif;
+}
+.header p{
+    position: relative;
+    left:20%;
+    font-style: italic;
+    font-stretch: expanded;
+    font-size: x-large;
+}
+#nav-bar li{
+    display: inline-block;
+    margin:0 20px;
+}
+#nav-bar ul{
+    margin-left:350px;
+}
+#nav-bar a{
+    text-decoration: none;
+    color:white;
+    font-size: larger;
+    margin-right:20px;
+    text-transform: uppercase;
+    display: block;
+    position:relative;
+    cursor:pointer;
+    padding:10px;
+}
+#nav-bar a::before{
+    content:"";
+    width:100%;
+    height:4px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    transition:0.5s transform ease;
+    transform:scale3d(0,1,1);
+    transform-origin:0 50%;
+}
+#nav-bar a:hover::before{
+    transform: scale3d(1,1,1);
+}
+#nav-bar a::before{
+    background: white;
+    transform-origin: 100% 50%;
+}
+#nav-bar a:hover::before{
+    transform-origin:0 50%;
+}
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+/* .bg{
+    position: absolute;
+    z-index: -99;
+} */
+.card {
+    background-color: rgba(226, 224, 224, 0.874);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Pie chart - a simple visual representation using circles */
+.pie-chart {
+    width: 150px;
+    height: 150px;
+    background: conic-gradient(
+        #ff4757 25%, 
+        #1e90ff 25% 50%, 
+        #2ed573 50% 75%, 
+        #ffa502 75%
+    );
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.links {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.links a:hover {
+    background-color: #0056b3;
+}

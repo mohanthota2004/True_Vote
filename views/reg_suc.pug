@@ -1,0 +1,51 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Registration Successful
+  link(rel='stylesheet' href='./assests/css/reg_suc.css')
+// Header
+header
+  img#lo(src='./assets/img/log.png' alt='logo')
+  nav#nav-bar
+    ul
+      li
+        a(href='/main') Home
+      li
+        a(href='/main#interface-container') Features
+      li
+        a(href='/main#account-steps') Help
+  p Caste your vote
+// Body Content
+section.success-section
+  .success-container
+    h2 Registration Successful!
+    p Welcome, ! Your registration was successful.
+    
+    br
+    a.success-link(href='/login') Go to Home
+// Footer
+footer
+  .footer-container
+    .footer-column
+      h2 About True Vote
+      p
+        | True Vote is an online voting platform designed to ensure secure and transparent elections. Our system is trusted by millions of users for its efficiency and reliability.
+    .footer-column
+      h2 Key Features
+      ul
+        li Secure voting process
+        li Real-time results
+        li User-friendly interface
+        li Available 24/7
+        li Trusted by organizations worldwide
+    .footer-column
+      h2 Follow Us On
+      i.fab.fa-instagram
+      i.fab.fa-x
+      i.fab.fa-facebook
+    .footer-column
+      a(href='/contact')
+        button.contact-button Contact Us
+      a(href='#') Help?
+  p.footer-rights All rights reserved to @True Vote

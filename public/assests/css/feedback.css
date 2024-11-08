@@ -1,0 +1,105 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eada9c; /* Changed background color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.header {
+    background-color: #7b5029; /* Changed header color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Main Section */
+.main-section {
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #7b5029; /* Changed focus color */
+    outline: none;
+}
+
+/* Textarea Styles */
+textarea {
+    resize: vertical;
+}
+
+/* Button Styles */
+.btn {
+    background-color: #04AA6D; /* Changed button color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #039e6d; /* Changed hover button color */
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    background-color: #222; /* Changed footer background */
+    color: white;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .main-section {
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,119 @@
+| !DOCTYPE html&gt;
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Admin Dashboard
+  link(rel='stylesheet' href='./assests/css/voter.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css')
+// Header
+header
+  img#lo(src='./assests/img/log.png' alt='logo')
+  nav#nav-bar
+    ul
+      li
+        a#na(href='#') Home
+      li
+        a#na(href='#Engage') Campaign
+      li
+        a#na(href='#reports') Results
+    #sidebar.sidebar
+      .sidebar-header
+        // <h2>Admin Panel</h2>
+        button.close-btn(onclick='toggleSidebar()') &#x2716;
+      ul
+        li
+          a(href='#')
+            i.fas.fa-users
+            |  Profile
+        // <li><a href="./admin-dash.html" ><i class="fas fa-chart-line"></i> Dashboard</a></li>
+        li
+          a(href='#')
+            i.fas.fa-chart-pie
+            | Overview
+        li
+          a(href='#')
+            i.fas.fa-bullhorn
+            | Campaign
+        li
+          a(href='#')
+            i.fas.fa-chart-bar
+            | Polling Reports
+        li
+          a(href='#')
+            i.fas.fa-cog
+            |  Settings
+        li
+          a(href='/login')
+            i.fas.fa-sign-out-alt
+            |  logout
+  .profile
+    img.profile-logo(src='./assests/img/admin-pic.jpeg' alt='Profile Logo')
+    span.Candidate-name Voter name 
+    button.open-btn(onclick='toggleSidebar()') &#x25BC; 
+
+main
+  section.carousel-container
+    #carouselItems.carousel-items
+      .carousel-grid
+        .grid-item Grid Item 1
+        .grid-item Grid Item 2
+      .carousel-grid
+        .grid-item Grid Item 3
+        .grid-item Grid Item 4
+      .carousel-grid
+        .grid-item Grid Item 5
+        .grid-item Grid Item 6
+      .carousel-grid
+        .grid-item Grid Item 7
+        .grid-item Grid Item 8
+  .carousel-buttons
+    button.carousel-button(onclick='prevGrid()') &#x276E;
+    button.carousel-button(onclick='nextGrid()') &#x276F;
+  section#polls.main-section
+    h2
+      i.fas.fa-chart-line
+      | upcoming polls
+    p
+      | Show more information about each upcoming poll, such as start and end times, and the type of poll.
+    a(href='./upcoming polls')
+      button.btn(type='button') upcoming polls
+  section#polls.main-section
+    h2
+      i.fas.fa-comments
+      | User Feedback
+    p Respond to Feedback about polling.
+    a(href='./feedback.html')
+      button.btn(type='button') Submit Feedback
+  section#polls.main-section
+    h2
+      i.fas.fa-chart-bar
+      | User Analytics
+    p Demographics and voting patterns analysis.
+    a(href='./view analytics')
+      button.btn(type='button') View Analytics
+  // Footer
+  footer
+    .footer-container
+      .footer-column
+        h2 About True Vote
+        p
+          | True Vote is an online voting platform designed to ensure secure and transparent elections. Our system is trusted by millions of users for its efficiency and reliability.
+      .footer-column
+        h2 Key Features
+        ul
+          li Secure voting process
+          li Real-time results
+          li User-friendly interface
+          li Available 24/7
+          li Trusted by organizations worldwide
+      .footer-column
+        h2 Follow Us On
+        i.fab.fa-instagram
+        i.fab.fa-x
+        i.fab.fa-facebook
+      .footer-column
+        a(href='/contact')
+          button.contact-button Contact Us
+        a(href='#') Help?
+    p.footer-rights  copy &amp;: All rights reserved to @True Vote
+  script(src='./assests/js/voter.js')

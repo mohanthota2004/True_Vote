@@ -1,0 +1,88 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Create Poll
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css')
+    link(rel='stylesheet' href='/assests/css/create-poll.css')
+  body
+    header
+      img#lo(src='/assests/img/log.png' alt='logo')
+      nav#nav-bar
+        ul
+          li
+            a#na(href='/') Home
+          li
+            a#na(href='#interface-container') Features
+          li
+            a#na(href='#account-steps') Help
+      .profile
+        img.profile-logo(src='/assests/img/admin-pic.jpeg' alt='Profile Logo')
+        span.admin-name Admin 
+        button.open-btn(onclick='toggleSidebar()') &#x25BC;
+      .sidebar.sidebar#sidebar
+        .sidebar-header
+          button.close-btn(onclick='toggleSidebar()') &#x2716;
+        ul
+          li
+            a(href='#')
+              i.fas.fa-users
+              |  Profile
+          li
+            a(href='#')
+              i.fas.fa-chart-line
+              |  Dashboard
+          li
+            a(href='#')
+              i.fas.fa-poll
+              |  Manage Polls
+          li
+            a(href='#')
+              i.fas.fa-chart-bar
+              |  Polling Reports
+          li
+            a(href='#')
+              i.fas.fa-cog
+              |  Settings
+          li
+            a(href='/login')
+              i.fas.fa-sign-out-alt
+              |  Logout
+    section.contain
+      .form-container
+        h2 Create a Poll
+        form(action='/poll/create' method='POST')
+          .container
+            label(for='title') Poll Title:
+            input#title(type='text' name='title' placeholder='Enter poll title' required)
+            label(for='positionNumber') How many positions are in the poll?
+            input#positionNumber(type='number' placeholder='Enter number of positions' onchange='createPositionForms()' required)
+          #positionForms
+          #candidateForms
+          button#createPoll(type='submit') Create Poll
+    footer
+      .footer-container
+        .footer-column
+          h2 About True Vote
+          p
+            | True Vote is an online voting platform designed to ensure secure and transparent elections. Our system is trusted by millions of users for its efficiency and reliability.
+        .footer-column
+          h2 Key Features
+          ul
+            li Secure voting process
+            li Real-time results
+            li User-friendly interface
+            li Available 24/7
+            li Trusted by organizations worldwide
+        .footer-column
+          h2 Follow Us On
+          a(href='#') i.fab.fa-instagram
+          a(href='#') i.fab.fa-twitter
+          a(href='#') i.fab.fa-facebook
+        .footer-column
+          a(href='/contact')
+            button.contact-button Contact Us
+          a(href='#') Help?
+      p.footer-rights copy &amp;: All rights reserved to @True Vote
+    script(src='/assests/js/create-poll.js')

@@ -1,0 +1,129 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Admin Dashboard
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css')
+  link(rel='stylesheet' href='./assests/css/ad,Can.css')
+// Header
+header
+  img#lo(src='./assests/img/log.png' alt='logo')
+  nav#nav-bar
+    ul
+      li
+        a#na(href='#') Home
+      li
+        a#na(href='#pol') Polls
+      li
+        a#na(href='#reports') Results
+    #sidebar.sidebar
+      .sidebar-header
+        // <h2>Admin Panel</h2>
+        button.close-btn(onclick='toggleSidebar()') &#x2716;
+      ul
+        li
+          a(href='#')
+            i.fas.fa-users
+            |  Profile
+        // <li><a href="./admin-dash.html" ><i class="fas fa-chart-line"></i> Dashboard</a></li>
+        li
+          a(href='#')
+            i.fas.fa-poll
+            |  Manage Polls
+        li
+          a(href='#')
+            i.fas.fa-chart-bar
+            | Polling Reports
+        li
+          a(href='#')
+            i.fas.fa-cog
+            |  Settings
+        li
+          a(href='/login')
+            i.fas.fa-sign-out-alt
+            |  logout
+  .profile
+    img.profile-logo(src='./assests/img/admin-pic.jpeg' alt='Profile Logo')
+    span.admin-name Admin 
+    button.open-btn(onclick='toggleSidebar()') &#x25BC; 
+// <button class="open-btn" onclick="toggleSidebar()">☰</button>
+// Sidebar
+// Main Content
+section.contain
+  .content
+    // Dashboard Section
+    section#dashboard.main-section
+      h1 Welcome, Admin!
+      .cards-container
+        .card
+          h3 Total Users
+          p
+            i.fas.fa-users
+            |  120
+        .card
+          h3 Active Polls
+          p
+            i.fas.fa-poll
+            |  12
+        .card
+          h3
+            i.fas.fa-chart-bar
+            | Pending Reports
+          p
+            i.fas.fa-file-alt
+            |  5
+        //
+          <div class="card">
+          <h3>Site Traffic</h3>
+          <p><i class="fas fa-chart-line"></i> 2,450 visits</p>
+          </div>
+  // Manage Polls Section
+  section#pol
+    section#polls.main-section
+      h2
+        i.fas.fa-chart-line
+        | Manage Polls
+      p Create, edit, and view poll results here.
+      a(href='/create-poll')
+        button.btn(type='button') Create Poll
+      button.btn(type='button') End Poll
+  // Reports Section
+  section#reports.main-section
+    h2
+      i.fas.fa-chart-bar
+      | Polling Reports
+    p Analyze user activity and system reports.
+    button.btn(type='button') Vive reports
+  // Settings Section
+  //
+    <section id="settings" class="main-section">
+    <h2><i class="fas fa-cog"></i>Settings</h2>
+    <p>Adjust your preferences and system settings here.</p>
+    </section>
+    </div>
+  // Footer
+  footer
+    .footer-container
+      .footer-column
+        h2 About True Vote
+        p
+          | True Vote is an online voting platform designed to ensure secure and transparent elections. Our system is trusted by millions of users for its efficiency and reliability.
+      .footer-column
+        h2 Key Features
+        ul
+          li Secure voting process
+          li Real-time results
+          li User-friendly interface
+          li Available 24/7
+          li Trusted by organizations worldwide
+      .footer-column
+        h2 Follow Us On
+        i.fab.fa-instagram
+        i.fab.fa-x
+        i.fab.fa-facebook
+      .footer-column
+        a(href='./contact')
+          button.contact-button Contact Us
+        a(href='#') Help?
+    p.footer-rights  copy &amp;: All rights reserved to @True Vote
+script(src='./assests/js/admin.js')

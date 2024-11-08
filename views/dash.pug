@@ -1,0 +1,41 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title True Vote Dashboard
+  link(rel='stylesheet' href='./assests/css/dash.css')
+.container
+  dic.header
+    img#lo(src='./assests/img/log.png' alt='logo')
+    nav#nav-bar
+      ul
+        li
+          a(href='#Home') Home
+        li
+          a(href='dash.html') dashboard
+        li
+          a(href='about.html') About
+    section
+    p Caste your vote
+//
+  <div class="bg">
+  <img src="./assests/img/bg.png" alt="bg load">
+  </div>
+.dashboard
+  // Card 1: Total Votes
+  .card
+    h2 Total Votes
+    p 1500
+  // Card 2: Ongoing Polls
+  .card
+    h2 Ongoing Polls
+    p 3 Active Polls
+  // Card 3: Results Overview
+  .card
+    h2 Results Overview
+    .pie-chart
+    p Red: 25%, Blue: 25%, Green: 25%, Orange: 25%
+.links
+  a(href='#') Create New Poll
+  a(href='#') Manage Polls
+  a(href='#') View Results

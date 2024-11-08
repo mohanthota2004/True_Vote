@@ -1,0 +1,56 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Contact Us - Virtual Outfit Customization
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css')
+  link(rel='stylesheet' href='./assests/css/contact.css')
+header
+  img#lo(src='./assests/img/log.png' alt='logo')
+  nav#nav-bar
+    ul
+      li
+        a(href='/main') Home
+      li
+        a(href='/main#interface-container') Features
+      li
+        a(href='/main#account-steps') Help
+  p#ft Caste your vote
+#main-content
+  h1 Contact Us
+  form(action='submit_contact.php' method='POST')
+    // Update with your form handling script
+    input(type='text' name='name' placeholder='Your Name' required='')
+    input(type='email' name='email' placeholder='Your Email' required='')
+    textarea(name='message' rows='5' placeholder='Your Message' required='')
+    button(type='submit') Send Message
+  .contact-info
+    h3 Contact Information
+    br
+    p Email: support@virtualoutfit.com
+    p Phone: (123) 456-7890
+    p Address: 123 Fashion St, Style City, SC 12345
+footer
+  .footer-container
+    .footer-column
+      h2 About True Vote
+      p#ft
+        | True Vote is an online voting platform designed to ensure secure and transparent elections. Our system is trusted by millions of users for its efficiency and reliability.
+    .footer-column
+      h2 Key Features
+      ul
+        li Secure voting process
+        li Real-time results
+        li User-friendly interface
+        li Available 24/7
+        li Trusted by organizations worldwide
+    .footer-column
+      h2 Follow Us On
+      i.fab.fa-instagram
+      i.fab.fa-x
+      i.fab.fa-facebook
+    .footer-column
+      a(href='./contact.html')
+        button.contact-button Contact Us
+      a(href='#') Help?
+  p.footer-rights  copy &amp;: All rights reserved to @True Vote
